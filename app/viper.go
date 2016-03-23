@@ -1,4 +1,4 @@
-package main
+package app
 
 import (
 	"fmt"
@@ -34,13 +34,14 @@ func TestViper() {
 			// 	}
 			// }
 			fmt.Println(k, v)
-		}
-		if value, ok := v.(map[string]string); ok {
-			for x, y := range value {
-				fmt.Println(x, y)
+
+			if value, ok := v.(map[string]string); ok {
+				for x, y := range value {
+					fmt.Println(x, y)
+				}
+			} else {
+				fmt.Println(ok)
 			}
-		} else {
-			fmt.Println(ok)
 		}
 	}
 	// for k, v := range logConf["meta"]["input"] {
