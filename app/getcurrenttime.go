@@ -23,4 +23,10 @@ func TestGetCurrentTime() {
 	//字符串转时间戳 把字符串时间认为是在location时区
 	t2, _ := time.ParseInLocation("2006-01-02 15:04:05", "2006-01-03 15:04:05", location)
 	fmt.Println("2006-01-03 15:04:05 的时间戳是: " + strconv.FormatInt(t2.Unix(), 10))
+
+	//测试time since
+	//It is shorthand for time.Now().Sub(t)
+	t, _ := time.ParseInLocation("2006-01-02 15:04:05", "2016-03-23 17:43:27", location)
+	dur := time.Now().Sub(t).Seconds() //seconds()函数用浮点数秒表示时差
+	fmt.Println("时间段: " + strconv.FormatFloat(dur, 'g', 6, 64))
 }
