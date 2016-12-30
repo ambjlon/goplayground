@@ -9,5 +9,9 @@ func main() {
 	fmt.Println("my golang playground!")
 	//app.TestViper()//暂时不可用, 丢了数据文件
 	//app.TestGetCurrentTime()
-	app.TestEarthDistance()
+	//app.TestEarthDistance()
+	//app.TestMaptoJSONStr()
+	//
+	//app.TestSaramaKafkaProducer()
+	app.TestConsumerOffset()
 }

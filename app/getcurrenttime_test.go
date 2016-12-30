@@ -3,12 +3,13 @@ package app
 import (
 	"fmt"
 	"strconv"
+	"testing"
 	"time"
 )
 
 //测试获得当前时间, 并以各种形式显示
 //时间戳是全世界唯一的计时数据. 同一个时间戳在不同的时区得到不同的字符串时间.
-func TestGetCurrentTime() {
+func TestGetCurrentTime(ts *testing.T) {
 	//定义时区
 	location, err := time.LoadLocation("Asia/Shanghai")
 	if err != nil {
